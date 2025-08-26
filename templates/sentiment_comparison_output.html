@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Comparison</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #a2c2e0, #f7a1a1);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Header Styling */
+        h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+            animation: slideInDown 1s ease-in-out;
+            background: linear-gradient(90deg, #ff6b6b, #f94d6a);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            width: 90%;
+            max-width: 1200px;
+            border: 2px solid #fff;
+        }
+
+        /* Iframe Container */
+        iframe {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            width: 90%;
+            max-width: 1200px;
+            height: 600px;
+        }
+
+        /* Back Button Styling */
+        .back-button {
+            font-size: 1.2em;
+            color: #ffffff;
+            background: #ff6f61;
+            border: none;
+            border-radius: 12px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .back-button:hover {
+            background: #ff3d36;
+            transform: scale(1.05);
+        }
+
+        .back-button:active {
+            background: #ff3b2d;
+            transform: scale(0.95);
+        }
+
+        /* Keyframes for Animations */
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Sentiment Comparison Between Joe Biden and Donald Trump</h1>
+    <iframe src="{{ plot_url }}" frameborder="0"></iframe>
+    <button class="back-button" onclick="window.location.href='/'">Back to Index</button>
+</body>
+</html>

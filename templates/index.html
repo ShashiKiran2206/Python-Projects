@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Result Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Election Result Prediction Using Twitter Sentiment Analysis</h1>
+    
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash-message">
+          {{ messages[0] }}
+        </div>
+      {% endif %}
+    {% endwith %}
+    
+    <form method="POST" enctype="multipart/form-data">
+        <div class="upload-container">
+            <b>Choose Trump File</b><input type="file" name="file1" required >
+            <b>Choose Biden File</b><input type="file" name="file2" required>
+            <button type="submit">Upload Datasets</button>
+        </div>
+    </form>
+
+    <div class="button-container">
+      <button onclick="window.location.href='/show_head'">Show Dataset Head</button>
+      <button onclick="window.location.href='/trump_polarity'">Trump Polarity</button>
+      <button onclick="window.location.href='/biden_polarity'">Biden Polarity</button>
+      <button onclick="window.location.href='/drop_random'">Drop Random Rows</button>
+      <button onclick="window.location.href='/filter_neutral'">Remove Neutral</button>
+
+     
+      
+      <button onclick="window.location.href='/sentiment_comparison'">Sentiment Comparison</button>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #6a1b9a, #ab47bc);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Header Styling */
+        h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+            margin-top: 20px;
+            animation: slideInDown 1s ease-in-out;
+            background: linear-gradient(90deg, #ff4081, #ff1744);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            width: 90%;
+            max-width: 1200px;
+            border: 2px solid #fff;
+        }
+
+        /* Container for Outputs */
+        .output-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 30px;
+        }
+
+        /* Output Boxes */
+        .output {
+            background: #fff;
+            color: #333;
+            border-radius: 12px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+            margin: 10px;
+            padding: 20px;
+            width: 65%;
+            max-height: 400px;
+            overflow-y: auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Output Box Hover Effect */
+        .output:hover {
+            transform: scale(1.03);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+            background: #f0f0f0;
+        }
+
+        /* Back Button Styling */
+        .back-button {
+            font-size: 1.2em;
+            color: #ffffff;
+            background: #ff6f61;
+            border: none;
+            border-radius: 12px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .back-button:hover {
+            background: #ff3d36;
+            transform: scale(1.05);
+        }
+
+        .back-button:active {
+            background: #ff3b2d;
+            transform: scale(0.95);
+        }
+
+        /* Keyframes for Animations */
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .output {
+                width: calc(100% - 20px);
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Top Five Rows Of Trump & Biden</h1>
+    <div class="output-container">
+        <div class="output">
+            {{ output1|safe }}
+        </div>
+        <div class="output">
+            {{ output2|safe }}
+        </div>
+    </div>
+    <button class="back-button" onclick="window.location.href='/'">Back to Index</button>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Header Styling */
+        h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+            animation: slideInDown 1s ease-in-out;
+            background: linear-gradient(90deg, #ff6b6b, #f94d6a);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            width: 90%;
+            max-width: 1200px;
+            border: 2px solid #fff;
+        }
+
+        /* Output Container */
+        .output-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            max-width: 800px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        /* Output Paragraphs */
+        .output-container p {
+            background: #fff;
+            color: #333;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Paragraph Hover Effect */
+        .output-container p:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Back Button Styling */
+        .back-button {
+            font-size: 1.2em;
+            color: #ffffff;
+            background: #ff6f61;
+            border: none;
+            border-radius: 12px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .back-button:hover {
+            background: #ff3d36;
+            transform: scale(1.05);
+        }
+
+        .back-button:active {
+            background: #ff3b2d;
+            transform: scale(0.95);
+        }
+
+        /* Keyframes for Animations */
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <div class="output-container">
+        <p>Trump Reviews Shape after filtering: {{ trump_shape }}</p>
+        <p>Biden Reviews Shape after filtering: {{ biden_shape }}</p>
+    </div>
+    <button class="back-button" onclick="window.location.href='/'">Back to Index</button>
+</body>
+</html>
