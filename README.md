@@ -39,4 +39,4 @@ venv\Scripts\activate
  Contributions are welcome!
  ## 9. License
 This project is open-source. License: MIT License
- ## 10. Contact- GitHub: ShashiKiran2206 (https://github.com/ShashiKiran2206)- Email: donthaganishashikiran@gmail.com
+ ## 10. Contact- GitHub: ShashiKiran2206 (https://github.com/ShashiKiran2206/Python-Projects.git)- Email: donthaganishashikiran@gmail.com
