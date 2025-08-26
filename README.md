@@ -14,6 +14,11 @@
  Trumpall2.csv # Tweet data for Trump
  README.md # Project documentation
  ## 3. Prerequisites- Python 3.x- Recommended: Virtual environment (`venv` or `conda`)- Suggested libraries (to include in requirements.txt):- Flask- pandas- numpy- matplotlib- scikit-learn- nltk
+ python -m venv venv
+# On macOS/Linux
+source venv/bin/activate
+# On Windows
+venv\Scripts\activate
  ## 4. Installation & Setup
  1. Clone the repository:
  git clone https://github.com/ShashiKiran2206/Python-Projects.git
