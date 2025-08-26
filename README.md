@@ -1,5 +1,5 @@
  ## 1. Overview
- This repository contains Python projects that analyze and visualize tweet data, including datasets
+ This repository contains Election Result Prediction By Analyzing Tweets that analyze and visualize tweet data, including datasets
  related to political figures such as Biden and Trump. The application is built in Python (likely using
  Flask for the web interface) and demonstrates data processing, visualization, and interactive UI with
  templates.
@@ -34,4 +34,4 @@
  Contributions are welcome!
  ## 9. License
 This project is open-source. License: MIT License
- ## 10. Contact- GitHub: ShashiKiran2206 (https://github.com/ShashiKiran2206)- Email: [Your email here
+ ## 10. Contact- GitHub: ShashiKiran2206 (https://github.com/ShashiKiran2206)- Email: donthaganishashikiran@gmail.com
